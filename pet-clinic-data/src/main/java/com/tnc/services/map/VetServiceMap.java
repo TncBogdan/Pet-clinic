@@ -2,9 +2,11 @@ package com.tnc.services.map;
 
 import com.tnc.model.Vet;
 import com.tnc.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {

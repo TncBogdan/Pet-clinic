@@ -1,11 +1,11 @@
 package com.tnc.services.map;
 
 import com.tnc.model.Pet;
-import com.tnc.services.CrudService;
+import com.tnc.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();

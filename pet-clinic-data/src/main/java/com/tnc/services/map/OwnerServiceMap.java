@@ -1,11 +1,11 @@
 package com.tnc.services.map;
 
 import com.tnc.model.Owner;
-import com.tnc.services.CrudService;
+import com.tnc.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService{
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -31,4 +31,8 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
         super.deleteById(id);
     }
 
+    @Override
+    public Owner findLastName(String lastName) {
+        return null;
+    }
 }

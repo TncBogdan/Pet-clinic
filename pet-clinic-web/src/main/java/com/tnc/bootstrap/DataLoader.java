@@ -4,7 +4,6 @@ import com.tnc.model.Owner;
 import com.tnc.model.Vet;
 import com.tnc.services.OwnerService;
 import com.tnc.services.VetService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +13,6 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    @Autowired
     public DataLoader(OwnerService ownerService, VetService vetService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
@@ -31,25 +29,25 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner1.setId(2L);
-        owner1.setFirstName("Mary");
-        owner1.setLastName("Losley");
+        owner2.setId(2L);
+        owner2.setFirstName("Mary");
+        owner2.setLastName("Losley");
 
         System.out.println("Loading owners...");
 
         ownerService.save(owner2);
 
         Vet vet1 = new Vet();
-        owner1.setId(1L);
-        owner1.setFirstName("Michel");
-        owner1.setLastName("Corso");
+        vet1.setId(1L);
+        vet1.setFirstName("Rian");
+        vet1.setLastName("Corso");
 
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        owner1.setId(2L);
-        owner1.setFirstName("Jassie");
-        owner1.setLastName("Floyd");
+        vet2.setId(2L);
+        vet2.setFirstName("Jassie");
+        vet2.setLastName("Floyd");
 
         vetService.save(vet2);
 

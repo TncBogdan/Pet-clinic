@@ -1,6 +1,6 @@
 package com.tnc.services.map;
 
-import com.tnc.model.Speciality;
+import com.tnc.model.Specialty;
 import com.tnc.model.Vet;
 import com.tnc.services.SpecialityService;
 import com.tnc.services.VetService;
@@ -32,7 +32,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
         if (object.getSpecialities().size() > 0){
             object.getSpecialities().forEach(speciality -> {
                 if (speciality.getId() == null){
-                    Speciality saveSpecialty = specialityService.save(speciality);
+                    Specialty saveSpecialty = specialityService.save(speciality);
                     speciality.setId(saveSpecialty.getId());
                 }
             });

@@ -84,9 +84,9 @@ public class DataLoader implements CommandLineRunner {
         marryPet.setName("Marco");
         owner2.getPets().add(marryPet);
 
-        System.out.println("Loading owners...");
-
         ownerService.save(owner2);
+
+        System.out.println("Loading owners...");
 
         Visit catVisit = new Visit();
         catVisit.setPet(michellePet);

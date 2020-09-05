@@ -1,6 +1,6 @@
 package com.tnc.services;
 
-import com.tnc.model.Specialty;
+import com.tnc.model.Speciality;
 
-public interface SpecialityService extends CrudService<Specialty, Long> {
+public interface SpecialityService extends CrudService<Speciality, Long> {
 }
